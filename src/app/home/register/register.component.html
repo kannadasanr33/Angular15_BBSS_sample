@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-header>
+        <h2>{{isEdit ? 'Edit' : 'Registeration'}}</h2>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="registerform" (ngSubmit)="proceedregister()">
+            <mat-form-field class="example-full-width">
+              <mat-label>Username</mat-label>
+              <input matInput formControlName="id" >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password" >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" >
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Role</mat-label>
+                <mat-select formControlName="role">
+                    <mat-option value=''>Select Role</mat-option>
+                    <mat-option *ngFor="let item of rolelist" [value]="item.role">
+                        {{item.role}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+              <div>
+                <button mat-raised-button color="primary">Submit</button>
+                <a routerLink="/" mat-raised-button color="accent">Back to List</a>
+              </div>
+          </form>
+    </mat-card-content>
+  </mat-card>
+
+

@@ -1,0 +1,34 @@
+<mat-card>
+    <mat-card-header>
+        <h2>Selected Item</h2>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form" [formGroup]="registerform" >
+        <mat-form-field class="example-full-width">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="id" readonly>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" readonly>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password" readonly>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" readonly>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Role</mat-label>
+            <input matInput formControlName="role" readonly>            
+        </mat-form-field>
+          <div>
+            <a routerLink="/" mat-raised-button color="accent">Back to List</a>
+          </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+

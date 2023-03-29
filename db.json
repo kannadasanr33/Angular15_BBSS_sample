@@ -1,0 +1,79 @@
+{
+  "user": [
+    {
+      "id": "santhosh",
+      "name": "Test admin",
+      "username": "Test admin",
+      "password": "Test$1234",
+      "email": "testadmin@gmail.com",
+      "role": "admin",
+      "isactive": false
+    },
+    {
+      "id": "kanna",
+      "name": "Test manager",
+      "username": "Test manager",
+      "password": "Test#1234",
+      "email": "testManager@gmail.com",
+      "role": "manager",
+      "isactive": false
+    },
+    {
+      "id": "dasan",
+      "name": "Test user",
+      "username": "Test user",
+      "password": "Test@1234",
+      "email": "testuser@gmail.com",
+      "role": "user",
+      "isactive": false
+    },
+    {
+      "id": "rahul",
+      "name": "test manager",
+      "password": "Test@12345",
+      "email": "testRahul@gmail.com",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "ramachan",
+      "name": "ramchandran manager",
+      "password": "Test@4321",
+      "email": "TestManager@gmail.com",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "samsumg",
+      "name": "test user",
+      "password": "Test*1234",
+      "email": "samsung@gmail.com",
+      "role": "user",
+      "isactive": true
+    }
+  ],
+  "menu": [],
+  "roleaccess": [
+    {
+      "role": "admin",
+      "menu": "user",
+      "haveedit": true,
+      "haveadd": true,
+      "havedelete": true
+    },
+    {
+      "role": "manager",
+      "menu": "user",
+      "haveedit": true,
+      "haveadd": true,
+      "havedelete": false
+    },
+    {
+      "role": "user",
+      "menu": "user",
+      "haveedit": false,
+      "haveadd": false,
+      "havedelete": false
+    }
+  ]
+}
