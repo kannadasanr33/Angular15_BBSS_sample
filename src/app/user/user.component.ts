@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms'
+import { FormBuilder } from '@angular/forms'
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -12,9 +12,9 @@ import { forkJoin } from 'rxjs';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent implements AfterViewInit {
+export class UserComponent {
 
-  constructor(private builder: FormBuilder, private service: AuthService, private dialog: MatDialog) {
+  constructor(private service: AuthService) {
     this.LoadUserWithDetails();
   }
   userlist: any;
@@ -23,9 +23,6 @@ export class UserComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  ngAfterViewInit(): void {
-
-  }
   LoadUserWithDetails() {
     // forkJoin implemented
     forkJoin({
@@ -42,9 +39,5 @@ export class UserComponent implements AfterViewInit {
       });
   }
   displayedColumns: string[] = ['username', 'name', 'email', 'phone', 'website'];
-
-
-
-
 
 }

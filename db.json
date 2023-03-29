@@ -50,6 +50,14 @@
       "email": "samsung@gmail.com",
       "role": "user",
       "isactive": true
+    },
+    {
+      "id": "danial",
+      "name": "danial admin",
+      "password": "Test@1472",
+      "email": "daniadmin@gmail.com",
+      "role": "admin",
+      "isactive": true
     }
   ],
   "menu": [],
